@@ -1,0 +1,114 @@
+
+<div class="generic-container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="lead">Account Form New</span>
+    </div>
+    <div class="formcontainer">
+      <form action="" class="form-horizontal">
+
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-2 control-lable" for="firstName">First Name</label>
+            <div class="col-md-7">
+              <input type="text" id="firstName" class="form-control input-sm" placeholder="Enter First Name." />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-2 control-lable" for="lastName">Last Name</label>
+            <div class="col-md-7">
+              <input type="text" id="lastName" class="form-control input-sm" placeholder="Enter Last Name." />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-2 control-lable" for="file">Email</label>
+            <div class="col-md-7">
+              <input type="email" name="email" class="email form-control input-sm" placeholder="Enter your Email" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-2 control-lable" for="accountNo">Account
+              Number</label>
+            <div class="col-md-7">
+              <input type="text" id="accountNo" class="form-control input-sm" placeholder="Enter account number." />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-2 control-lable" for="institutionName">Institution
+              Name</label>
+            <div class="col-md-7">
+              <input type="text" id="institutionName" class="form-control input-sm" placeholder="Enter Institution Name." />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-2 control-lable" for="type">Type</label>
+            <div class="col-md-7">
+              <input type="text" id="date" class="form-control input-sm" placeholder="Enter type." />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-actions floatRight">
+            <input type="submit" class="btn btn-primary btn-sm" value="Add">
+            <button type="button" class="btn btn-warning btn-sm">Reset Form</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <span class="lead">List of Accounts</span>
+      </div>
+      <div class="tablecontainer">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>ID.</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Account Number</th>
+              <th>Institution Name</th>
+              <th>Type</th>
+              <th width="20%"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let account of accounts">
+              <td>{{account.id}}</td>
+							<td>{{account.firstName}}</td>
+							<td>{{account.lastName}}</td>
+							<td>{{account.email}}</td>
+							<td>{{account.accountNo}}</td>
+							<td>{{account.institutionName}}></td>
+							<td>{{account.type}}</td>
+							<td>
+								
+                <button type="button" 
+                  class="btn btn-success custom-width">Edit</button>
+                <button type="button" 
+                  class="btn btn-danger custom-width">Remove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+
